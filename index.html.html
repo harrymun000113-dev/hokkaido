@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홋카이도 오타루 겨울 여행 안내</title>
+    <!-- 고급스러운 명조체 웹 폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 기본 설정 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #F8F9FA;
+            color: #2C3E50;
+            line-height: 1.6;
+        }
+
+        /* 눈 내리는 몽환적인 상단 배너 */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            background-image: 
+                linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)),
+                url('https://images.unsplash.com/photo-1542055925-54fb26a11e29?q=80&w=2000&auto=format&fit=crop'); /* 삿포로/홋카이도 겨울 배경 */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+
+        /* 메인 컨텐츠 영역 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* 도입부 소개 */
+        .intro-text {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .intro-text h2 {
+            font-size: 2rem;
+            color: #1A252C;
+            margin-bottom: 20px;
+        }
+        
+        .intro-text p {
+            font-size: 1.1rem;
+            color: #596A7A;
+            max-width: 800px;
+            margin: 0 auto;
+            word-break: keep-all;
+        }
+
+        /* 명소 카드 그리드 레이아웃 */
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-size: 1.4rem;
+            color: #2C3E50;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498DB;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* 미식 가이드 배너 */
+        .food-banner {
+            background-color: #EBF5FB;
+            padding: 50px 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .food-banner h2 {
+            font-size: 1.8rem;
+            color: #2980B9;
+            margin-bottom: 15px;
+        }
+
+        .food-banner p {
+            color: #34495E;
+            font-size: 1.05rem;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #2C3E50;
+            color: #BDC3C7;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 히어로 배너 -->
+    <header class="hero-section">
+        <h1>오타루, 겨울의 낭만</h1>
+        <p>시간이 멈춘 듯한 은빛 눈의 도시로의 초대</p>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="container">
+        <!-- 소개 영역 -->
+        <section class="intro-text">
+            <h2>정갈한 눈의 미학을 온전히 느끼다</h2>
+            <p>
+                단순한 여행지를 넘어, 현지 특유의 깊은 감성과 고즈넉한 겨울의 정취를 선사하는 오타루. 
+                메이지 시대의 옛 창고들과 은은한 가스등이 빚어내는 풍경 속을 거닐며 
+                일본 특유의 섬세하고 차분한 아름다움 속으로 빠져보세요.
+            </p>
+        </section>
+
+        <!-- 명소 안내 (카드형) -->
+        <section class="attractions-grid">
+            <!-- 명소 1 -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1610313014135-e6ff5e44cb89?q=80&w=800&auto=format&fit=crop" alt="오타루 운하" class="card-img">
+                <div class="card-content">
+                    <h3>오타루 운하 (小樽運河)</h3>
+                    <p>해 질 녘, 운하를 따라 늘어선 63개의 가스등이 켜지는 순간이 하이라이트입니다. 눈 쌓인 산책로를 걸으며 차분하고 낭만적인 현지의 겨울 밤을 만끽해 보세요.</p>
+                </div>
+            </article>
+
+            <!-- 명소 2 -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1517457224213-90d0b7d8ec77?q=80&w=800&auto=format&fit=crop" alt="오르골당" class="card-img">
+                <div class="card-content">
+                    <h3>오타루 오르골당 본관</h3>
+                    <p>메이지 45년에 지어진 붉은 벽돌 건물 안에서 수만 개의 오르골이 뿜어내는 따스한 멜로디. 입구에 자리한 증기 시계의 고풍스러운 자태도 놓치지 마십시오.</p>
+                </div>
+            </article>
+
+            <!-- 명소 3 -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1605634599986-778848d70e5b?q=80&w=800&auto=format&fit=crop" alt="기타이치 가라스" class="card-img">
+                <div class="card-content">
+                    <h3>기타이치 가라스 (北一硝子)</h3>
+                    <p>오타루의 상징인 정교한 유리 공예품의 진수를 볼 수 있는 곳입니다. 167개의 램프로만 불을 밝히는 '기타이치 홀' 카페에서 환상적인 티타임을 가질 수 있습니다.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- 미식 추천 -->
+        <section class="food-banner">
+            <h2>미각으로 기억하는 홋카이도</h2>
+            <p>
+                오타루 미도리바시 근처 스시야도리(초밥 거리)에서 갓 잡은 싱싱한 <strong>해산물 덮밥(카이센동)</strong>을 맛보고, 
+                사카이마치 거리에 위치한 <strong>르타오(LeTAO) 본점</strong>에서 눈처럼 입안에서 녹아내리는 더블 프로마쥬 치즈케이크를 곁들여 완벽한 하루를 완성하십시오.
+            </p>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>Hokkaido Otaru Winter Guide Portfolio &copy; 2026. All rights reserved.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">Crafted with deep appreciation for Japanese aesthetics.</p>
+    </footer>
+
+</body>
+</html>
